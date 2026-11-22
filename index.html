@@ -4,100 +4,61 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sahil Mothsra</title>
-<meta name="description" content="Learn how to read charts and understand intraday market setups. Educational content only. Not investment advice.">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg:#0f172a;
-  --card:#162036;
-  --line:#26334f;
-  --text:#f1f5f9;
-  --muted:#aab6cb;
-  --gold:#ffd54a;
-  --cta:#22c55e;
-  --cta-hover:#4ade80;
-  --on-cta:#04210f;
-}
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
 body{
   font-family:'Poppins',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.6;
+  background:#0f172a;
+  color:#f1f5f9;
+  min-height:100vh;
   display:flex;
+  align-items:center;
   justify-content:center;
-  padding:24px 14px 40px;
+  padding:24px 16px;
 }
-.wrap{width:100%;max-width:440px}
 .card{
-  background:var(--card);
-  border:1px solid var(--line);
+  width:100%;
+  max-width:380px;
+  text-align:center;
+  background:#162036;
+  border:1px solid #26334f;
   border-radius:16px;
-  padding:28px 22px;
+  padding:32px 22px 24px;
 }
-.hero{text-align:center}
 .avatar{
-  width:84px;height:84px;border-radius:50%;
-  border:2px solid var(--gold);
+  width:90px;height:90px;border-radius:50%;
+  border:2px solid #ffd54a;
   object-fit:cover;
+  background:#26334f;
   margin-bottom:14px;
-  background:var(--line);
 }
-h1{font-size:22px;font-weight:700;line-height:1.3;margin-bottom:8px}
-.name{font-size:22px;color:var(--gold);font-weight:700;margin-bottom:20px}
+h1{font-size:22px;font-weight:700;color:#ffd54a;margin-bottom:6px}
+.sub{font-size:14px;color:#aab6cb;margin-bottom:24px}
 .btn{
   display:block;
-  text-align:center;
   text-decoration:none;
-  background:var(--cta);
-  color:var(--on-cta);
+  background:#22c55e;
+  color:#04210f;
   font-weight:700;
   font-size:16px;
-  padding:15px 16px;
+  padding:15px;
   border-radius:10px;
   transition:background .2s;
 }
-.btn:hover{background:var(--cta-hover)}
-.btn:focus-visible,.footer a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
-.note{font-size:12px;color:var(--muted);margin-top:10px;text-align:center}
-h2{font-size:16px;font-weight:600;margin:28px 0 12px}
-.list{list-style:none}
-.list li{
-  position:relative;
-  padding:0 0 12px 26px;
-  font-size:14px;
-  color:var(--text);
-}
-.list li::before{
-  content:"";
-  position:absolute;left:2px;top:7px;
-  width:10px;height:10px;border-radius:50%;
-  background:var(--gold);
-}
-.list span{display:block;color:var(--muted);font-size:13px}
-.disclosure{
+.btn:hover{background:#4ade80}
+.btn:focus-visible,a:focus-visible{outline:3px solid #ffd54a;outline-offset:3px}
+.disclaimer{
   margin-top:22px;
-  border:1px solid var(--line);
-  border-radius:12px;
-  padding:16px;
-  font-size:12px;
-  color:var(--muted);
-  line-height:1.65;
+  font-size:11.5px;
+  line-height:1.6;
+  color:#aab6cb;
 }
-.disclosure strong{color:var(--text)}
-.disclosure p+p{margin-top:8px}
-.footer{
-  margin-top:22px;
-  text-align:center;
-  font-size:12px;
-  color:var(--muted);
-}
-.footer a{color:#7dd3fc;text-decoration:none}
-.footer a:hover{text-decoration:underline}
-.footer .links{margin-bottom:8px}
-.footer .links a+a{margin-left:14px}
-@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+.links{margin-top:12px;font-size:12px}
+.links a{color:#7dd3fc;text-decoration:none}
+.links a+a{margin-left:14px}
+.links a:hover{text-decoration:underline}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 
 <!-- Meta Pixel Code -->
@@ -118,48 +79,26 @@ src="https://www.facebook.com/tr?id=1859277921922584&ev=PageView&noscript=1" alt
 <!-- End Meta Pixel Code -->
 </head>
 <body>
-<main class="wrap">
-  <section class="card hero">
-    <img src="profile.jpg" class="avatar" alt="Sahil Mothsra" width="84" height="84">
-    <h1 class="name">Sahil Mothsra</h1>
+<main class="card">
+  <img src="profile.jpg" class="avatar" alt="Sahil Mothsra" width="90" height="90">
+  <h1>Sahil Mothsra</h1>
+  <p class="sub">Free market education on Telegram</p>
 
-    <a href="https://telegram.me/+jPMYs4u45KtkMTU9" class="btn" id="cta1" rel="noopener">Join the free Telegram channel</a>
-    <p class="note">Free to join. You can leave any time.</p>
+  <a href="https://telegram.me/+jPMYs4u45KtkMTU9" class="btn" rel="noopener">Join Telegram Channel</a>
 
-    <h2 style="text-align:left">What you will find inside</h2>
-    <ul class="list" style="text-align:left">
-      <li>Daily chart analysis
-        <span>Worked examples of support, resistance and trend on live charts.</span></li>
-      <li>How a trade plan is built
-        <span>Learn how entry, stop-loss and targets are planned, as education and not as advice.</span></li>
-      <li>Beginner-friendly explanations
-        <span>Plain-language lessons on candlesticks, volume and risk management.</span></li>
-      <li>Market updates
-        <span>Short notes on what moved the market during the session.</span></li>
-    </ul>
+  <p class="disclaimer">
+    Content is for educational purposes only and is not investment advice. Trading involves risk of loss and no returns are guaranteed. Consult a SEBI-registered investment adviser before making any decision.
+  </p>
 
-    <a href="https://telegram.me/+jPMYs4u45KtkMTU9" class="btn" id="cta2" rel="noopener">Join the free Telegram channel</a>
-  </section>
-
-  <section class="disclosure" aria-label="Risk disclosure">
-    <p><strong>Important disclosure.</strong> All content shared is for educational and informational purposes only. It is not investment advice, a recommendation, or an offer to buy or sell any security.</p>
-  
-  <footer class="footer">
-    <div class="links">
-      <a href="/privacy-policy">Privacy Policy</a>
-      <a href="/terms">Terms</a>
-      <a href="/disclaimer">Disclaimer</a>
-    </div>
-    <div>Powered by <a href="https://t.me/adsrankmedia" target="_blank" rel="noopener">AdRank Media</a></div>
-  </footer>
+  <div class="links">
+    <a href="/privacy-policy">Privacy Policy</a>
+    <a href="/terms">Terms</a>
+  </div>
 </main>
 
 <script>
-// Track Telegram joins as a Lead event for Meta ad optimisation
-document.querySelectorAll('.btn').forEach(function(b){
-  b.addEventListener('click', function(){
-    if (typeof fbq === 'function') { fbq('track', 'Lead'); }
-  });
+document.querySelector('.btn').addEventListener('click', function(){
+  if (typeof fbq === 'function') { fbq('track', 'Lead'); }
 });
 </script>
 </body>
