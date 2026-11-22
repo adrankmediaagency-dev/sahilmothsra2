@@ -2,113 +2,104 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SAHIL MOTHSRA</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sahil Mothsra</title>
+<meta name="description" content="Learn how to read charts and understand intraday market setups. Educational content only. Not investment advice.">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+:root{
+  --bg:#0f172a;
+  --card:#162036;
+  --line:#26334f;
+  --text:#f1f5f9;
+  --muted:#aab6cb;
+  --gold:#ffd54a;
+  --cta:#22c55e;
+  --cta-hover:#4ade80;
+  --on-cta:#04210f;
 }
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
-background:#0f172a;
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:100vh;
-color:#fff;
+  font-family:'Poppins',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  display:flex;
+  justify-content:center;
+  padding:24px 14px 40px;
 }
-.container{
-width:95%;
-max-width:420px;
-padding:30px 25px;
-border-radius:18px;
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(12px);
-border:1px solid rgba(255,255,255,0.08);
-box-shadow:0 20px 60px rgba(0,0,0,0.6);
-text-align:center;
+.wrap{width:100%;max-width:440px}
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:28px 22px;
 }
-.logo{
-width:80px;
-height:80px;
-border-radius:50%;
-border:2px solid #FFD700;
-margin-bottom:12px;
+.hero{text-align:center}
+.avatar{
+  width:84px;height:84px;border-radius:50%;
+  border:2px solid var(--gold);
+  object-fit:cover;
+  margin-bottom:14px;
+  background:var(--line);
 }
-h1{
-font-size:22px;
-color:#FFD700;
-margin-bottom:6px;
-}
-.sub{
-font-size:13px;
-opacity:0.7;
-margin-bottom:18px;
-}
+h1{font-size:22px;font-weight:700;line-height:1.3;margin-bottom:8px}
+.name{font-size:22px;color:var(--gold);font-weight:700;margin-bottom:20px}
 .btn{
-display:block;
-text-decoration:none;
-background:#22c55e;
-color:#000;
-font-weight:700;
-padding:16px;
-border-radius:10px;
-margin:12px 0;
-transition:0.3s;
+  display:block;
+  text-align:center;
+  text-decoration:none;
+  background:var(--cta);
+  color:var(--on-cta);
+  font-weight:700;
+  font-size:16px;
+  padding:15px 16px;
+  border-radius:10px;
+  transition:background .2s;
 }
-.btn:hover{
-background:#16a34a;
-transform:scale(1.03);
+.btn:hover{background:var(--cta-hover)}
+.btn:focus-visible,.footer a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.note{font-size:12px;color:var(--muted);margin-top:10px;text-align:center}
+h2{font-size:16px;font-weight:600;margin:28px 0 12px}
+.list{list-style:none}
+.list li{
+  position:relative;
+  padding:0 0 12px 26px;
+  font-size:14px;
+  color:var(--text);
 }
-.trust{
-background:rgba(0,255,150,0.08);
-padding:10px;
-border-radius:10px;
-font-size:13px;
-margin-bottom:15px;
-border:1px solid rgba(0,255,150,0.2);
+.list li::before{
+  content:"";
+  position:absolute;left:2px;top:7px;
+  width:10px;height:10px;border-radius:50%;
+  background:var(--gold);
 }
-.points{
-list-style:none;
-font-size:14px;
-text-align:left;
-margin:15px 0;
+.list span{display:block;color:var(--muted);font-size:13px}
+.disclosure{
+  margin-top:22px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:16px;
+  font-size:12px;
+  color:var(--muted);
+  line-height:1.65;
 }
-.points li{
-margin:8px 0;
-}
-.timer{
-margin-top:10px;
-font-size:13px;
-color:#facc15;
-}
-.proof{
-margin-top:12px;
-font-size:12px;
-opacity:0.7;
-}
+.disclosure strong{color:var(--text)}
+.disclosure p+p{margin-top:8px}
 .footer{
-margin-top:20px;
-font-size:12px;
-opacity:0.6;
+  margin-top:22px;
+  text-align:center;
+  font-size:12px;
+  color:var(--muted);
 }
-.footer a{
-color:#38bdf8;
-text-decoration:none;
-font-weight:600;
-}
-.footer a:hover{
-text-decoration:underline;
-}
-.risk{
-margin-top:10px;
-font-size:11px;
-opacity:0.5;
-}
+.footer a{color:#7dd3fc;text-decoration:none}
+.footer a:hover{text-decoration:underline}
+.footer .links{margin-bottom:8px}
+.footer .links a+a{margin-left:14px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
+
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -123,38 +114,53 @@ fbq('init', '1859277921922584');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1859277921922584&ev=PageView&noscript=1"
-/></noscript>
+src="https://www.facebook.com/tr?id=1859277921922584&ev=PageView&noscript=1" alt=""/></noscript>
 <!-- End Meta Pixel Code -->
 </head>
 <body>
-<div class="container">
-  <img src="profile.jpg" class="logo">
-  <h1>SAHIL MOTHSRA</h1>
-  <p class="sub">Daily Intraday Trading Signals & Analysis</p>
-  <a href="https://telegram.me/+jPMYs4u45KtkMTU9" class="btn">
-    🚀 Join Free Telegram Channel
-  </a>
-  <div class="trust">
-    ✔ Trusted by 5,000+ Traders <br>
-    ✔ Daily Consistent Setups
-  </div>
-  <ul class="points">
-    <li>✔ 5–7 High Probability Trades</li>
-    <li>✔ Exact Entry, SL & Target</li>
-    <li>✔ Beginner Friendly Guidance</li>
-    <li>✔ Live Market Updates</li>
-  </ul>
-  <a href="https://telegram.me/+jPMYs4u45KtkMTU9" class="btn">
-    🚀 Join Free Telegram Channel
-  </a>
-  <div class="timer">⏳ Free Access Closing Soon</div>
-  <div class="proof">📈 Limited Seats • Active Community</div>
-  <p class="risk">⚠ Market investments are subject to risk</p>
-  <div class="footer">
-    Powered by
-    <a href="https://t.me/adsrankmedia" target="_blank">AdRank Media</a>
-  </div>
-</div>
+<main class="wrap">
+  <section class="card hero">
+    <img src="profile.jpg" class="avatar" alt="Sahil Mothsra" width="84" height="84">
+    <h1 class="name">Sahil Mothsra</h1>
+
+    <a href="https://telegram.me/+jPMYs4u45KtkMTU9" class="btn" id="cta1" rel="noopener">Join the free Telegram channel</a>
+    <p class="note">Free to join. You can leave any time.</p>
+
+    <h2 style="text-align:left">What you will find inside</h2>
+    <ul class="list" style="text-align:left">
+      <li>Daily chart analysis
+        <span>Worked examples of support, resistance and trend on live charts.</span></li>
+      <li>How a trade plan is built
+        <span>Learn how entry, stop-loss and targets are planned, as education and not as advice.</span></li>
+      <li>Beginner-friendly explanations
+        <span>Plain-language lessons on candlesticks, volume and risk management.</span></li>
+      <li>Market updates
+        <span>Short notes on what moved the market during the session.</span></li>
+    </ul>
+
+    <a href="https://telegram.me/+jPMYs4u45KtkMTU9" class="btn" id="cta2" rel="noopener">Join the free Telegram channel</a>
+  </section>
+
+  <section class="disclosure" aria-label="Risk disclosure">
+    <p><strong>Important disclosure.</strong> All content shared is for educational and informational purposes only. It is not investment advice, a recommendation, or an offer to buy or sell any security.</p>
+  
+  <footer class="footer">
+    <div class="links">
+      <a href="/privacy-policy">Privacy Policy</a>
+      <a href="/terms">Terms</a>
+      <a href="/disclaimer">Disclaimer</a>
+    </div>
+    <div>Powered by <a href="https://t.me/adsrankmedia" target="_blank" rel="noopener">AdRank Media</a></div>
+  </footer>
+</main>
+
+<script>
+// Track Telegram joins as a Lead event for Meta ad optimisation
+document.querySelectorAll('.btn').forEach(function(b){
+  b.addEventListener('click', function(){
+    if (typeof fbq === 'function') { fbq('track', 'Lead'); }
+  });
+});
+</script>
 </body>
 </html>
